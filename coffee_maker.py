@@ -4,7 +4,6 @@ class CoffeeMaker:
             'water': water,
             'coffee': coffee,
             'milk': milk,
-            'money': 0
         }
 
     def report(self):

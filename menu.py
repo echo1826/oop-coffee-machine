@@ -16,3 +16,15 @@ class Menu:
             MenuItem('cappuccino', 3.0, 250, 24, 100)
         ]
 
+    def show_menu(self):
+        print(f"Here are the menu choices.")
+        for item in self.menu:
+            print(f"{item.name} ${item.price:.2f}")
+    
+    def find_item(self, order_name):
+        for item in self.menu:
+            if order_name == item.name:
+                return item
+        print("Sorry that item is not available.")
+
+
