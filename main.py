@@ -16,11 +16,21 @@ def main():
     if user_input == 'report':
         coffee_machine.report()
         money_machine.report()
+        main()
+    elif user_input == 'off':
+        exit(1)
     else:
         order = menu.find_item(user_input)
+
     if not order:
-        return main()
+        main()
+
     if not money_machine.process_payment(order.price):
-        return main()
+        main()
+
+    if not coffee_machine.resources_suffcient(order):
+        main()
+    coffee_machine.make_coffee(order)
+    main()
 
 main()

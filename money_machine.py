@@ -13,7 +13,7 @@ class MoneyMachine:
         self.money_received = 0
 
     def report(self):
-        print(f"Money: ")
+        print(f"Money: {self.CURRENCY}{self.profit:.2f}")
 
     def insert_coins(self):
         print("Please insert coins.")
